@@ -77,25 +77,26 @@
 
 
 
-<meta name="description" content="模拟登陆某大学信息门户并爬取数据爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结构清晰，爬虫为一个类，每一点都利用一个函数实现，需要用到的参数设置为爬虫类的实例对象，利用init函数赋">
+<meta name="description" content="模拟登陆某大学信息门户并爬取数据查看登陆页面：  可发现验证码是简单的四位字母数字验证码，可用最方便的pytesseract进行识别。 爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结">
 <meta name="keywords" content="pytesseract模块,requests库,BeatifulSoup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模拟登陆某大学信息门户并爬取姓名和账户余额">
 <meta property="og:url" content="http://yoursite.com/2019/01/22/模拟登陆某大学信息门户并爬取姓名和账户余额/index.html">
 <meta property="og:site_name" content="squareWU">
-<meta property="og:description" content="模拟登陆某大学信息门户并爬取数据爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结构清晰，爬虫为一个类，每一点都利用一个函数实现，需要用到的参数设置为爬虫类的实例对象，利用init函数赋">
+<meta property="og:description" content="模拟登陆某大学信息门户并爬取数据查看登陆页面：  可发现验证码是简单的四位字母数字验证码，可用最方便的pytesseract进行识别。 爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/22/images/login.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/post_param_headers.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/captcha_img_get_headers.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/ajax_elements.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/ajax_post_headers.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/ajax_data.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/22/images/data_json.png">
-<meta property="og:updated_time" content="2019-01-22T16:51:08.392Z">
+<meta property="og:updated_time" content="2019-01-22T18:25:51.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模拟登陆某大学信息门户并爬取姓名和账户余额">
-<meta name="twitter:description" content="模拟登陆某大学信息门户并爬取数据爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结构清晰，爬虫为一个类，每一点都利用一个函数实现，需要用到的参数设置为爬虫类的实例对象，利用init函数赋">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/22/images/post_param_headers.png">
+<meta name="twitter:description" content="模拟登陆某大学信息门户并爬取数据查看登陆页面：  可发现验证码是简单的四位字母数字验证码，可用最方便的pytesseract进行识别。 爬虫整体架构 获取验证码图片 利用pytesseract识别验证码，返回验证码的值 带上账号、密码、验证码发送post请求，获取登陆需要的cookies 利用获取到的cookies发送get请求登陆后页面 解析网页获取数据 保存数据(json格式)在本爬虫中为了结">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/22/images/login.png">
 
 
 
@@ -344,7 +345,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,914 字
+                  1,950 字
                 </span>
               
 
@@ -381,7 +382,10 @@
       
 
       
-        <h1 id="模拟登陆某大学信息门户并爬取数据"><a href="#模拟登陆某大学信息门户并爬取数据" class="headerlink" title="模拟登陆某大学信息门户并爬取数据"></a>模拟登陆某大学信息门户并爬取数据</h1><h2 id="爬虫整体架构"><a href="#爬虫整体架构" class="headerlink" title="爬虫整体架构"></a>爬虫整体架构</h2><ol>
+        <h1 id="模拟登陆某大学信息门户并爬取数据"><a href="#模拟登陆某大学信息门户并爬取数据" class="headerlink" title="模拟登陆某大学信息门户并爬取数据"></a>模拟登陆某大学信息门户并爬取数据</h1><p>查看登陆页面：</p>
+<p><img src="../images/login.png" alt="login"></p>
+<p>可发现验证码是简单的四位字母数字验证码，可用最方便的pytesseract进行识别。</p>
+<h2 id="爬虫整体架构"><a href="#爬虫整体架构" class="headerlink" title="爬虫整体架构"></a>爬虫整体架构</h2><ol>
 <li>获取验证码图片</li>
 <li>利用pytesseract识别验证码，返回验证码的值</li>
 <li>带上账号、密码、验证码发送post请求，获取登陆需要的cookies</li>
